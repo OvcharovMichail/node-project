@@ -1,0 +1,35 @@
+{
+  "name": "preprocessors",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "moduleResolution": "node",
+  "scripts": {
+    "build": "tsc server/index.ts",
+    "start": "npx tsx server/index.ts",
+    "start2": "node --loader ts-node/esm server/index.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "chalk": "^5.6.2",
+    "sass": "^1.94.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "uuid": "^13.0.0",
+    "xliff": "^6.3.0"
+  },
+  "imports": {
+    "#routes/*": "./server/routes/*.ts",
+    "#services/*": "./server/services/*.ts",
+    "#modules/*": "./server/modules/*.ts",
+    "#middleWare/*": "./server/middleWares/*.ts",
+    "#types/*": "./server/types/*.ts"
+  }
+}

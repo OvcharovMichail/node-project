@@ -1,1 +1,1 @@
-# node-project
+# JavaRush
